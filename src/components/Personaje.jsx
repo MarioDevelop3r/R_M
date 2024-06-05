@@ -6,8 +6,16 @@ function Personaje() {
 
   return (
     <div>
-      <h1>Personaje {id}</h1>
-      {/* Resto del código para mostrar la información del personaje */}
+     
+      <div key={id}>
+            <a href={Personaje.id}>{Personaje.name}</a>
+            <img src={Personaje.image} alt="" />
+            <p>{Personaje.species}</p>
+            <p>{Personaje.status}</p>
+            <p>{Personaje.gender}</p>
+            <p>{Personaje.origin.name}</p>
+            <p>{Personaje.location.name}</p>
+          </div>
     </div>
   );
 }
