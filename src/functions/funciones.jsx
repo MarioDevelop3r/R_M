@@ -9,7 +9,7 @@ import axios from 'axios';
 
     const unicoPersonaje = async (id, state) => {
         const peticion = await axios.get(`https://rickandmortyapi.com/api/character/${id}`)
-        console.log(peticion)
+      state(peticion.data)
     }
 
     export {todosPersonajes, unicoPersonaje }
